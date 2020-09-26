@@ -68,8 +68,8 @@ public class Person implements Serializable {
         return created;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setCreated() {
+        this.created = new Date();
     }
 
     public Date getLastEdited() {

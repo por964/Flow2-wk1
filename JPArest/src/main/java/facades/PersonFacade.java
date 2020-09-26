@@ -68,7 +68,9 @@ public class PersonFacade implements IPersonFacade {
             } else {
                 person.setAddress(new Address(street, zip, city));
             }
+            person.setCreated();
             em.persist(person);
+            
             em.getTransaction().commit();
         } finally {
             em.close();
